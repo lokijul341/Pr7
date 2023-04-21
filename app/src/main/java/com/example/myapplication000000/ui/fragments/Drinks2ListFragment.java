@@ -22,13 +22,41 @@ import com.example.myapplication000000.R;
 public class Drinks2ListFragment extends Fragment {
     RecyclerView recyclerView;
     MyCustomListAdapter myCustomListAdapter;
-   // Drinks2ListBinding binding;
-   // Drinks2ListViewModel drinks2ListViewModel;
+    Drinks2ListBinding binding;
+    Drinks2ListViewModel drinks2ListViewModel;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-    //    drinks2ListViewModel = new ViewModelProvider(this).get(Drinks2ListViewModel.class);
+        drinks2ListViewModel = new ViewModelProvider(this).get(Drinks2ListViewModel.class);
     }
 
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
+        binding = Drinks2ListBinding.inflate(inflater, container, false);
+        myCustomListAdapter = new MyCustomListAdapter();
+        return binding.getRoot();
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        binding.button7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_drinks2_list_fragment_to_profile_fragment);
+            }
+        });
+        if (getArguments()!=null)
+        {
+            Toast.makeText(getContext(), "Вы оценили напиток на "+getArguments().getFloat("Rating"), Toast.LENGTH_SHORT).show();
+        }
+        recyclerView = view.findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setAdapter(myCustomListAdapter);
+        drinks2ListViewModel.drinks.observe(getViewLifecycleOwner(), drinksList ->
+                myCustomListAdapter.updateDrinks2(drinksList));
+    }
 }
+

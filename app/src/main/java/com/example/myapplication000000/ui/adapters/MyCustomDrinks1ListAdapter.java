@@ -7,11 +7,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-//import androidx.navigation.Navigation;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication000000.R;
-import com.example.practice6.data.models.Drinks1;
+import com.example.myapplication000000.data.models.Drinks1;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +41,7 @@ public class MyCustomDrinks1ListAdapter extends RecyclerView.Adapter<MyCustomDri
                 Bundle bundle = new Bundle();
                 bundle.putString("Name",drink.getName());
                 bundle.putInt("Photo", drink.getPhoto());
-                //Navigation.findNavController(view).navigate(R.id.action_drinks1_list_fragment_to_single_drinks1_fragment, bundle);
+                Navigation.findNavController(view).navigate(R.id.action_drinks1_list_fragment_to_single_drinks1_fragment, bundle);
             }
         });
 

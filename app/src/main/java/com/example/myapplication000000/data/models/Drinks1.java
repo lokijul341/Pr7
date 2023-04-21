@@ -1,4 +1,4 @@
-package com.example.practice6.data.models;
+package com.example.myapplication000000.data.models;
 
 public class Drinks1 {
     String name;

@@ -8,11 +8,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-//import androidx.navigation.Navigation;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication000000.R;
-import com.example.practice6.data.models.Drinks2;
+import com.example.myapplication000000.data.models.Drinks2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,7 +45,7 @@ public class MyCustomListAdapter extends RecyclerView.Adapter<MyCustomListAdapte
                 bundle.putString("Name", drinks2.getName());
                 bundle.putString("Ml", drinks2.getDrinks2());
                 bundle.putInt("Image", drinks2.getImage());
-               // Navigation.findNavController(view).navigate(R.id.action_drinks2_list_fragment_to_single_drinks2_fragment, bundle);
+                Navigation.findNavController(view).navigate(R.id.action_drinks2_list_fragment_to_single_drinks2_fragment, bundle);
             }
         });
 
@@ -63,9 +63,9 @@ public class MyCustomListAdapter extends RecyclerView.Adapter<MyCustomListAdapte
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-          //  ml = itemView.findViewById(R.id.item_drink1);
-         //   imageView = itemView.findViewById(R.id.item_image);
-          //  name = itemView.findViewById(R.id.item_ml);
+            ml = itemView.findViewById(R.id.item_drink1);
+            imageView = itemView.findViewById(R.id.item_image);
+            name = itemView.findViewById(R.id.item_ml);
         }
     }
     public void updateDrinks2(List<Drinks2> books) {

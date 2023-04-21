@@ -13,10 +13,24 @@ import androidx.fragment.app.Fragment;
 
 
 public class SingleDrinks2Fragment extends Fragment {
-   // Drinks1InfoBinding binding;
+    Drinks1InfoBinding binding;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        if (getArguments() != null) {
+            String name = getArguments().getString("Name");
+            int image = getArguments().getInt("Photo");
+            binding.textView15.setText(name);
+            binding.imageView3.setImageResource(image);
+        }
+
+
+    }
+
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
+        binding = Drinks1InfoBinding.inflate(inflater, container, false);
+        return binding.getRoot();
     }
 }
