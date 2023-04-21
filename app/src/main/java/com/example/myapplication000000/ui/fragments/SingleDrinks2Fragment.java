@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-//import com.example.myapplication000000.databinding.Drinks1InfoBinding;
+import com.example.myapplication000000.databinding.Drinks1InfoBinding;
 
 
 public class SingleDrinks2Fragment extends Fragment {

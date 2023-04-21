@@ -28,9 +28,9 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
-//import androidx.navigation.Navigation;
+import androidx.navigation.Navigation;
 
-//import com.example.practice6.databinding.Screen1Binding;
+import com.example.myapplication000000.databinding.Screen1Binding;
 
 
 import java.io.File;

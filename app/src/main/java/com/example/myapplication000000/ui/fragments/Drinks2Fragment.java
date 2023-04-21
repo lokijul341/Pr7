@@ -9,10 +9,10 @@ import android.widget.RatingBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-//import androidx.navigation.Navigation;
+import androidx.navigation.Navigation;
 
-//import com.example.practice6.R;
-//import com.example.practice6.databinding.Screen3Binding;
+import com.example.myapplication000000.R;
+import com.example.myapplication000000.databinding.Screen3Binding;
 
 public class Drinks2Fragment extends Fragment {
     Screen3Binding binding;

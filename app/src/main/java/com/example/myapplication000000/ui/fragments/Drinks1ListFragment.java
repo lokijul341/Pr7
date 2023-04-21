@@ -17,8 +17,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.myapplication000000.ui.adapters.MyCustomDrinks1ListAdapter;
 import com.example.myapplication000000.R;
 
-//import com.example.myapplication000000.databinding.Drinks1ListBinding;
-//import com.example.myapplication000000.ui.viewmodels.Drinks1ListViewModel;
+import com.example.myapplication000000.databinding.Drinks1ListBinding;
+import com.example.myapplication000000.ui.viewmodels.Drinks1ListViewModel;
 
 public class Drinks1ListFragment extends Fragment{
 

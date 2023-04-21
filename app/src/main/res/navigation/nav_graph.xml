@@ -5,7 +5,7 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/profile_fragment">
     <fragment android:id="@+id/profile_fragment"
-        android:name="com.example.practice6.ui.fragments.ProfileFragment"
+        android:name="com.example.myapplication000000.ui.fragments.ProfileFragment"
         android:label="Screen One"
         tools:layout ="@layout/screen1">
         <action
@@ -16,7 +16,7 @@
             app:destination="@id/drinks1_list_fragment" />
     </fragment>
     <fragment android:id="@+id/drinks2_list_fragment"
-        android:name="com.example.practice6.ui.fragments.Drinks2ListFragment"
+        android:name="com.example.myapplication000000.ui.fragments.Drinks2ListFragment"
         android:label="Screen Four"
         tools:layout ="@layout/drinks2_list" >>
         <action
@@ -27,7 +27,7 @@
             app:destination="@id/profile_fragment" />
     </fragment>
     <fragment android:id="@+id/drinks1_list_fragment"
-        android:name="com.example.practice6.ui.fragments.Drinks1ListFragment"
+        android:name="com.example.myapplication000000.ui.fragments.Drinks1ListFragment"
         android:label="Screen Five"
         tools:layout ="@layout/drinks1_list" >>
         <action
@@ -38,7 +38,7 @@
             app:destination="@id/profile_fragment" />
     </fragment>
     <fragment android:id="@+id/single_drinks2_fragment"
-        android:name="com.example.practice6.ui.fragments.Drinks2Fragment"
+        android:name="com.example.myapplication000000.ui.fragments.Drinks2Fragment"
         android:label="Single Book"
         tools:layout ="@layout/screen3" >
         <action
@@ -46,7 +46,7 @@
             app:destination="@id/drinks2_list_fragment" />
     </fragment>
     <fragment android:id="@+id/single_drinks1_fragment"
-        android:name="com.example.practice6.ui.fragments.SingleDrinks2Fragment"
+        android:name="com.example.myapplication000000.ui.fragments.SingleDrinks2Fragment"
         android:label="Single drinks1"
         tools:layout ="@layout/drinks1_info" >
         <action
